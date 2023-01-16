@@ -13,6 +13,7 @@ class DepartmentSerializer(FixSerializer) :
         model = Department
         exclude = []
 
+
 class PersonalSerializer(FixSerializer) :
     class Meta :
         model = Personal

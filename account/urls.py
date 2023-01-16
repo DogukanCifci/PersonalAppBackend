@@ -1,6 +1,7 @@
+from rest_framework import routers
+from .views import AccountView
 
-from django.urls import path,include
+router = routers.DefaultRouter()
+router.register('accounts', AccountView)
 
-urlpatterns = [
-   
-]
+urlpatterns = router.urls
