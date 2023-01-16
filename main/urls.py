@@ -18,6 +18,7 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('auth/', include('dj_rest_auth.urls')), #$pip install yaptik ve installed app'e ekledik. sonra migrate yaptik.  user login/logout islemlerine de bakicak. Extra eklememe gerek yok.
     path('personal/', include('personal.urls')),
     path('account/', include('account.urls')),
 ]

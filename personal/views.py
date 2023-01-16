@@ -12,7 +12,6 @@ class FixView(ModelViewSet) :
 
 class DepartmentView(FixView) :
     queryset = Department.objects.all()
-    print(queryset)
     serializer_class = DepartmentSerializer
 
 class PersonalView(FixView) :

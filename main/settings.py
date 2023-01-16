@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     #third-party apps ;
     'rest_framework',
     'rest_framework.authtoken', #--->Token authentication
-
+    'dj_rest_auth',
     #my-apps ;
     'account',
     'personal',
