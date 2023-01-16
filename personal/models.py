@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+#Bütün modellerde sabit olacak #created_date , 'updated_date' vb.... FixModels'te yazicam
+
+class FixModel(models.Model) :
+    pass
+
+###------------------ Models -----------------------
+
