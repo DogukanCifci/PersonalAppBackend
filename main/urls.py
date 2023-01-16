@@ -18,6 +18,12 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('personal', include('personal.urls')),
-    path('account', include('account.urls')),
+    path('personal/', include('personal.urls')),
+    path('account/', include('account.urls')),
 ]
+
+# MEDIA & STATIC settings for urls.py: Bunu da kendim ekledim. (Image eklemek icin)
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

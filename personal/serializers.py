@@ -1,9 +1,9 @@
-from rest_framework import serializer
+from rest_framework import serializers
 from .models import *
 
 #Bütün modellerde sabit olacak seyleri FixSerializer'te yazicam
 
-class FixSerializer(serializer.Model) :
+class FixSerializer(serializers.Serializer) :
     pass
 
 ###------------------ Serializers -----------------------
@@ -13,7 +13,7 @@ class DepartmentSerializer(FixSerializer) :
         model = Department
         exclude = []
 
-class Personalserializer(FixSerializer) :
+class PersonalSerializer(FixSerializer) :
     class Meta :
         model = Personal
         exclude = []

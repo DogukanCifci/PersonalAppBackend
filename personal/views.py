@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
+from .serializers import *
+from .models import *
+
 #Bütün modellerde sabit olacak #created_date , 'updated_date' vb.... FixSerializer'te yazicam
 
 class FixView(ModelViewSet) :
@@ -7,4 +10,11 @@ class FixView(ModelViewSet) :
 
 ###------------------ Views -----------------------
 
+class DepartmentView(FixView) :
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+class PersonalView(FixView) :
+    queryset = Personal.objects.all()
+    serializer_class = PersonalSerializer
 
